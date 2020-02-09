@@ -18,7 +18,7 @@ jobs:
         dotnet-version: 3.0.102
     
     - name: Restore with dotnet
-      run: dotnet restore src/healthyteams.api.sln
+      run: dotnet restore ~/src/healthyteams.api.sln
     
     - name: Build with dotnet
       run: dotnet build --configuration Release
