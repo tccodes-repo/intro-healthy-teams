@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29409.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthyTeams.Api", "HealthyTeams.Api\HealthyTeams.Api.csproj", "{297A0391-8344-4990-AE9E-6A534A36082D}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HealthyTeams.Api.Tests", "HealthyTeams.Api.Tests\HealthyTeams.Api.Tests.csproj", "{A9136711-AC0B-4F87-AEA8-766730B24C3C}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{297A0391-8344-4990-AE9E-6A534A36082D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{297A0391-8344-4990-AE9E-6A534A36082D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{297A0391-8344-4990-AE9E-6A534A36082D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{297A0391-8344-4990-AE9E-6A534A36082D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9136711-AC0B-4F87-AEA8-766730B24C3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9136711-AC0B-4F87-AEA8-766730B24C3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9136711-AC0B-4F87-AEA8-766730B24C3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9136711-AC0B-4F87-AEA8-766730B24C3C}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F6870F56-D6B0-465D-B3BD-838899BE23F1}
+	EndGlobalSection
+EndGlobal
