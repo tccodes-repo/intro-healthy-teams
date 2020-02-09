@@ -1,6 +1,6 @@
 using System;
 
-namespace HealthyTeams.Api
+namespace HealthyTeams.Api.Models
 {
     public class WeatherForecast
     {
