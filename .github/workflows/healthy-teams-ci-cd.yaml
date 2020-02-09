@@ -15,7 +15,7 @@ jobs:
     - name: Setup .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: 2.2.401
+        dotnet-version: 2.2.108
     
     - name: Restore with dotnet
       run: dotnet restore 
@@ -27,7 +27,7 @@ jobs:
       run: dotnet test --configuration Release
     
     - name: Publish with dotnet
-      run: dotnet publish DeviceManagementService/DeviceManagementService.csproj --output ./publish-output --configuration Release
+      run: dotnet publish HealthyTeams.Api/HealthyTeams.Api.csproj --output ./publish-output --configuration Release
       
   #  - name: Deploy to Azure
   #    uses: azure/appservice-actions/webapp@master
