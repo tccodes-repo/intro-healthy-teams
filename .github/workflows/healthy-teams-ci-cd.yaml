@@ -29,9 +29,9 @@ jobs:
     - name: Publish with dotnet
       run: dotnet publish HealthyTeams.Api/HealthyTeams.Api.csproj --output ./publish-output --configuration Release
       
-  #  - name: Deploy to Azure
-  #    uses: azure/appservice-actions/webapp@master
-  #    with: 
-  #      app-name: iot-device-management
-  #      publish-profile: ${{ secrets.PUBLISH_PROFILE }}
-  #      package: /home/runner/work/iot-device-management-service/iot-device-management-service/DeviceManagementService/publish-output
+    - name: Deploy to Azure
+      uses: azure/appservice-actions/webapp@master
+      with: 
+        app-name: iot-device-management
+        publish-profile: ${{ secrets.PUBLISH_PROFILE }}
+        package: /home/runner/work/intro-healthy-teams/intro-healthy-teams/publish-output
