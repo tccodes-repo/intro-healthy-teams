@@ -29,7 +29,7 @@ namespace HealthyTeam.Api.Tests
             //arrange
 
             //act
-            IEnumerable<WeatherForecast> result = _controller.Get();
+            IEnumerable<WeatherForecast> result = _controller.List();
 
             //assert
             Assert.IsNotNull(result);
