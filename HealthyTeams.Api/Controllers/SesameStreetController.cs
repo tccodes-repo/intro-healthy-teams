@@ -13,8 +13,8 @@ namespace HealthyTeams.Api.Controllers
     {
         private string[] _characters = { "Ernie", "Big Bird", "Bert", "Oscar", "Grover", "Count", "Kermit", "Rosita" };
 
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet]        
+        public IEnumerable<string> List()
         {
             return _characters;
         }

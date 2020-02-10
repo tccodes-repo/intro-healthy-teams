@@ -9,7 +9,7 @@ using Microsoft.Extensions.Logging;
 namespace HealthyTeams.Api.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
+    [Route("api/weatherforcast")]
     public class WeatherForecastController : ControllerBase
     {
         private static readonly string[] Summaries = new[]
@@ -17,8 +17,8 @@ namespace HealthyTeams.Api.Controllers
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
         };       
 
-        [HttpGet]
-        public IEnumerable<WeatherForecast> Get()
+        [HttpGet]        
+        public IEnumerable<WeatherForecast> List()
         {
             var rng = new Random();
 

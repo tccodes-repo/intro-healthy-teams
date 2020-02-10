@@ -32,7 +32,7 @@ namespace HealthyTeam.Api.Tests
             int count = 5;
 
             //act
-            IEnumerable<string> result = _controller.Get();            
+            IEnumerable<string> result = _controller.List();            
 
             //assert
             Assert.AreEqual(count, result.Count());           
@@ -45,7 +45,7 @@ namespace HealthyTeam.Api.Tests
             int count = 25;
 
             //act
-            IEnumerable<string> result = _controller.Get();
+            IEnumerable<string> result = _controller.List();
 
             //assert
             Assert.AreNotEqual(count, result.Count());

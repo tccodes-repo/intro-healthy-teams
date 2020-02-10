@@ -7,28 +7,26 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HealthyTeams.Api.Controllers
 {
-    [Route("api/ernie")]
+    [Route("api/bert")]
     [ApiController]
     public class BertController : ControllerBase
     {
         private string[] _favoriteThings = new string[] { "Ernie", "Lamp Post", "Rocks", "Naps" };
-
-        // GET: api/ernie
-        [HttpGet]
-        public IEnumerable<string> Get()
+                
+        [HttpGet]       
+        public IEnumerable<string> List()
         {
             return _favoriteThings;
         }
 
-        // GET: api/ernie/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet]
+        [Route("{id}")]
         public string Get(int id)
         {
             return _favoriteThings[id - 1];
         }
-
-        // POST: api/ernie
-        [HttpPost]
+        
+        [HttpPost]        
         public IActionResult Post([FromBody] string value)
         {
             if (_favoriteThings.Contains(value))
@@ -38,9 +36,9 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkObjectResult("value saved successfully");
         }
-
-        // PUT: api/ernie/5
-        [HttpPut("{id}")]
+        
+        [HttpPut]
+        [Route("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
         {
             if (id > 10)
@@ -50,9 +48,9 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkResult();
         }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        
+        [HttpDelete]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             if (id == 3)

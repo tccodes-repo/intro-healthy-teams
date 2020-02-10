@@ -13,24 +13,22 @@ namespace HealthyTeams.Api.Controllers
     {
         private string[] _cookies = new[] { "Chocolate Chip", "Oatmeal Raisin", "Oreo", "Butter", "Snickerdoodles", "Gingersnaps", "Shortbread Cookies" };
 
-        // GET: api/cookie
-        [HttpGet]
-        public IEnumerable<string> Get()
+        [HttpGet]        
+        public IEnumerable<string> List()
         {
             var rng = new Random();
 
             return Enumerable.Range(1, 5).Select(index => new string(_cookies[rng.Next(_cookies.Length)])).ToArray();           
         }
 
-        // GET: api/ernie/5
-        [HttpGet("{id}", Name = "Get")]
+        [HttpGet]
+        [Route("{id}")]
         public string Get(int id)
         {
             return _cookies[2];
         }
 
-        // POST: api/ernie
-        [HttpPost]
+        [HttpPost]        
         public IActionResult Post([FromBody] string value)
         {
             if (_cookies.Contains(value))
@@ -41,8 +39,8 @@ namespace HealthyTeams.Api.Controllers
             return new OkObjectResult("value saved successfully");
         }
 
-        // PUT: api/ernie/5
-        [HttpPut("{id}")]
+        [HttpPut]
+        [Route("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
         {
             if (id > 10)
@@ -52,9 +50,9 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkResult();
         }
-
-        // DELETE: api/ApiWithActions/5
-        [HttpDelete("{id}")]
+        
+        [HttpDelete]
+        [Route("{id}")]
         public IActionResult Delete(int id)
         {
             if (id == 3)
