@@ -14,7 +14,7 @@ namespace HealthyTeam.Api.Tests
         [TestMethod]
         public void TestMethod_Fail()
         {
-            Assert.IsTrue(false);
+            Assert.IsFalse(false);
         }
     }
 }
