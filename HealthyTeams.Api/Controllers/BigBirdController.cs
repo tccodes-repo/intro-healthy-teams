@@ -11,9 +11,9 @@ namespace HealthyTeams.Api.Controllers
     [ApiController]
     public class BigBirdController : ControllerBase
     {
-        private string[] _favoriteThings = new string[] { "Roller Skate", "Ice Skate", "Dance", "Necktie", "Unicycle" };
-                
-        [HttpGet]       
+        private string[] _favoriteThings = new string[] { "Roller Skate", "Ice Skate", "Danc", "Necktie", "Unicycle" };
+
+        [HttpGet]
         public IEnumerable<string> List()
         {
             return _favoriteThings;
@@ -33,7 +33,7 @@ namespace HealthyTeams.Api.Controllers
             return "Mr. Snuff..";
         }
 
-        [HttpPost]        
+        [HttpPost]
         public IActionResult Post([FromBody] string value)
         {
             if (_favoriteThings.Contains(value))
@@ -41,9 +41,9 @@ namespace HealthyTeams.Api.Controllers
                 return new OkObjectResult(value + " not saved, already exists");
             }
 
-            return new OkObjectResult("value saved successfully");
+            return new OkObjectResult("value sav successfully");
         }
-        
+
         [HttpPut]
         [Route("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
@@ -55,7 +55,7 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkResult();
         }
-        
+
         [HttpDelete]
         [Route("{id}")]
         public IActionResult Delete(int id)

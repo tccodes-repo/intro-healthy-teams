@@ -55,12 +55,13 @@ namespace HealthyTeam.Api.Tests
         {
             //arrange
             int id = 2;
+            string value = "Lamp Past";
 
             //act
             string result = _controller.Get(id);
 
             //assert
-            Assert.AreEqual("Lamp Post", result);
+            Assert.AreEqual(value, result);
         }
 
         [TestMethod]
@@ -84,7 +85,7 @@ namespace HealthyTeam.Api.Tests
         public void BertController_Fail_Duplicate()
         {
             //arrange
-            string cookie = "Lamp Post";
+            string cookie = "Lamp Past";
 
             //act
             IActionResult result = _controller.Post(cookie);
