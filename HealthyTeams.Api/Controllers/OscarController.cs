@@ -11,9 +11,9 @@ namespace HealthyTeams.Api.Controllers
     [ApiController]
     public class OscarController : ControllerBase
     {
-        private string[] _favoriteThings = new string[] { "Trash Can", "Trash", "Farm", "Swiming Pool", "Bowling Ally", "Piano" };
-                
-        [HttpGet]       
+        private string[] _favoriteThings = new string[] { "Trash Can", "Trash", "Farm", "Swimmming Pool", "Bowling Ally", "Piano" };
+
+        [HttpGet]
         public IEnumerable<string> List()
         {
             return _favoriteThings;
@@ -25,8 +25,8 @@ namespace HealthyTeams.Api.Controllers
         {
             return _favoriteThings[id - 1];
         }
-        
-        [HttpPost]        
+
+        [HttpPost]
         public IActionResult Post([FromBody] string value)
         {
             if (_favoriteThings.Contains(value))
@@ -36,7 +36,7 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkObjectResult("value saved successfully");
         }
-        
+
         [HttpPut]
         [Route("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
@@ -48,7 +48,7 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkResult();
         }
-        
+
         [HttpDelete]
         [Route("{id}")]
         public IActionResult Delete(int id)

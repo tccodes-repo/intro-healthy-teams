@@ -11,9 +11,9 @@ namespace HealthyTeams.Api.Controllers
     [ApiController]
     public class ErnieController : ControllerBase
     {
-        private string[] _favoriteThings = new string[] { "Bert", "Rubber Ducky", "Singing", "Bath time" };
-            
-        [HttpGet]        
+        private string[] _favoriteThings = new string[] { "Bert", "Rubber Ducky", "Singing", "Bath tim" };
+
+        [HttpGet]
         public IEnumerable<string> List()
         {
             return _favoriteThings;
@@ -25,8 +25,8 @@ namespace HealthyTeams.Api.Controllers
         {
             return _favoriteThings[id - 1];
         }
-        
-        [HttpPost]   
+
+        [HttpPost]
         public IActionResult Post([FromBody] string value)
         {
             if (_favoriteThings.Contains(value))
@@ -34,9 +34,9 @@ namespace HealthyTeams.Api.Controllers
                 return new OkObjectResult(value + " not saved, already exists");
             }
 
-            return new OkObjectResult("value saved successfully");
+            return new OkObjectResult("value saved ssuccessfuilly");
         }
-       
+
         [HttpPut]
         [Route("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
@@ -48,7 +48,7 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkResult();
         }
-        
+
         [HttpDelete]
         [Route("{id}")]
         public IActionResult Delete(int id)
