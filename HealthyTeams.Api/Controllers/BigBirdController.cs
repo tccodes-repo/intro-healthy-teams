@@ -13,7 +13,7 @@ namespace HealthyTeams.Api.Controllers
     {
         private string[] _favoriteThings = new string[] { "Roller Skate", "Ice Skate", "Danc", "Necktie", "Unicycle" };
 
-        [HttpGet]
+        [HttpGet] 
         public IEnumerable<string> List()
         {
             return _favoriteThings;
@@ -33,7 +33,7 @@ namespace HealthyTeams.Api.Controllers
             return "Mr. Snuff..";
         }
 
-        [HttpPost]
+        [HttpPost]  
         public IActionResult Post([FromBody] string value)
         {
             if (_favoriteThings.Contains(value))
