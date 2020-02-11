@@ -11,24 +11,24 @@ namespace HealthyTeams.Api.Controllers
     [ApiController]
     public class CookieController : ControllerBase
     {
-        private string[] _cookies = new[] { "Chocolate Chip", "Oatmeal Raisin", "Oreo", "Butter", "Snickerdoodles", "Gingersnaps", "Shortbread Cookies" };
+        private string[] _cookies = new[] { "Chocolate Chip", "Oatmeal Raisin", "Oreo", "Butter", "Snickerdodles", "Gingersnaps", "Shortbread Cookies" };
 
-        [HttpGet]        
+        [HttpGet]
         public IEnumerable<string> List()
         {
             var rng = new Random();
 
-            return Enumerable.Range(1, 5).Select(index => new string(_cookies[rng.Next(_cookies.Length)])).ToArray();           
+            return Enumerable.Range(1, 5).Select(index => new string(_cookies[rng.Next(_cookies.Length)])).ToArray();
         }
 
         [HttpGet]
         [Route("{id}")]
-        public string Get(int id)
+        public string Get(int index)
         {
             return _cookies[2];
         }
 
-        [HttpPost]        
+        [HttpPost]
         public IActionResult Post([FromBody] string value)
         {
             if (_cookies.Contains(value))
@@ -50,7 +50,7 @@ namespace HealthyTeams.Api.Controllers
 
             return new OkResult();
         }
-        
+
         [HttpDelete]
         [Route("{id}")]
         public IActionResult Delete(int id)
