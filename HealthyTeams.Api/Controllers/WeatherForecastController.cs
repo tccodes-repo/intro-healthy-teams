@@ -12,12 +12,12 @@ namespace HealthyTeams.Api.Controllers
     [Route("api/weatherforcast")]
     public class WeatherForecastController : ControllerBase
     {
-        private static readonly string[] Summaries = new[]
+        private string[] _outcomes = new[]
         {
             "Freezing", "Bracing", "Chilly", "Cool", "Mild", "Warm", "Balmy", "Hot", "Sweltering", "Scorching"
-        };       
+        };
 
-        [HttpGet]        
+        [HttpGet]
         public IEnumerable<WeatherForecast> List()
         {
             var rng = new Random();
@@ -26,7 +26,7 @@ namespace HealthyTeams.Api.Controllers
             {
                 Date = DateTime.Now.AddDays(index),
                 TemperatureC = rng.Next(-20, 55),
-                Summary = Summaries[rng.Next(Summaries.Length)]
+                Summary = _outcomes[rng.Next(_outcomes.Length)]
             }).ToArray();
         }
     }

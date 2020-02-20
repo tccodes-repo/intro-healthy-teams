@@ -77,7 +77,7 @@ namespace HealthyTeam.Api.Tests
             //assert
             Assert.IsInstanceOfType(result, typeof(IActionResult), "'result' type must be of IActionResult");
             Assert.AreEqual(StatusCodes.Status200OK, response.StatusCode);
-            Assert.AreEqual("value saved successfully", responseValue);
+            Assert.AreEqual("value saved ssuccessfuilly", responseValue);
         }
 
         [TestMethod]
