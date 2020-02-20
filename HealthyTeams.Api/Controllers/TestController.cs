@@ -10,11 +10,11 @@ namespace HealthyTeams.Api.Controllers
     [Route("api/test")]
     [ApiController]
     public class TestController : ControllerBase
-    {                
-        [HttpGet]       
+    {
+        [HttpGet]
         public string Get()
         {
-            return "Hello World";
-        }        
+            return "Goodbye Moon";
+        }
     }
 }
