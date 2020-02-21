@@ -11,7 +11,7 @@ namespace HealthyTeams.Api.Controllers
     [ApiController]
     public class OscarController : ControllerBase
     {
-        private string[] _favoriteThings = new string[] { "Trash Can", "Trash", "Farm", "Swimmming Pool", "Bowling Ally", "Piano" };
+        private string[] _favoriteThings = new string[] { "Trash Can", "Trash", "Farm", "Swimming Pool", "Bowling Ally", "Piano" };
 
         [HttpGet]
         public IEnumerable<string> List()
