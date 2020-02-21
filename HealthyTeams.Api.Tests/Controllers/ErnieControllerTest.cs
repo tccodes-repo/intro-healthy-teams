@@ -28,7 +28,7 @@ namespace HealthyTeam.Api.Tests
         public void ErnieController_Get_Success()
         {
             //arrange
-            int count = 4;
+            int count = 6;
 
             //act
             IEnumerable<string> result = _controller.List();
