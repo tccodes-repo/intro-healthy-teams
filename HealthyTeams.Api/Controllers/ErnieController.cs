@@ -11,7 +11,7 @@ namespace HealthyTeams.Api.Controllers
     [ApiController]
     public class ErnieController : ControllerBase
     {
-        private string[] _favoriteThings = new string[] { "Bert", "Rubber Ducky", "Singing", "Bath tim", "Sand", "Grass" };
+        private string[] _favoriteThings = new string[] { "Bert", "Rubber Ducky", "Singing", "Bath tim", "Cookie Monster", "Count" };
 
         [HttpGet]
         public IEnumerable<string> List()
