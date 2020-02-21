@@ -11,9 +11,9 @@ namespace HealthyTeams.Api.Controllers
     [ApiController]
     public class SesameStreetController : ControllerBase
     {
-        private string[] _characters = { "Ernie", "Big Bird", "Bert", "Oscar", "Grover", "Count", "Kermit", "Rosita" };
+        private string[] _characters = { "Ernie", "Big Bird", "Bert", "Oscar", "Grover", "Count", "Kermit", "Rosita", "Dan" };
 
-        [HttpGet]        
+        [HttpGet]
         public IEnumerable<string> List()
         {
             return _characters;
