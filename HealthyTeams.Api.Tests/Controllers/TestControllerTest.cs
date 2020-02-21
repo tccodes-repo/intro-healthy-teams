@@ -28,13 +28,13 @@ namespace HealthyTeam.Api.Tests
         public void BertController_Get_Success()
         {
             //arrange
-            string value = "Hello World";
+            string value = "Goodbye Moon";
 
             //act
             string result = _controller.Get();
 
             //assert
             Assert.AreEqual(value, result);
-        }      
+        }
     }
 }

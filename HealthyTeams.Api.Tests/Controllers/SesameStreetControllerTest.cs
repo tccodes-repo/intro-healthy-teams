@@ -25,10 +25,10 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void ErnieController_Get_Success()
+        public void SesameController_Get_Success()
         {
             //arrange
-            int count = 8;
+            int count = 9;
 
             //act
             IEnumerable<string> result = _controller.List();
@@ -48,6 +48,6 @@ namespace HealthyTeam.Api.Tests
 
             //assert
             Assert.AreNotEqual(count, result.Count());
-        }        
+        }
     }
 }
