@@ -41,7 +41,7 @@ namespace HealthyTeams.Api.Controllers
         [Route("{id}")]
         public IActionResult Put(int id, [FromBody] string value)
         {
-            if (id > 10)
+            if (id < 1 || id > 10)
             {
                 return new NotFoundResult();
             }
