@@ -25,7 +25,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Get_Success()
+        public void OscarController_Get_Success()
         {
             //arrange
             int count = 6;
@@ -38,7 +38,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Get_CountFail()
+        public void OscarController_Get_CountFail()
         {
             //arrange
             int count = 25;
@@ -51,7 +51,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Get_ById_Success()
+        public void OscarController_Get_ById_Success()
         {
             //arrange
             int id = 3;
@@ -64,7 +64,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Post_Success()
+        public void OscarController_Post_Success()
         {
             //arrange
             string cookie = "Sand";
@@ -81,7 +81,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Fail_Duplicate()
+        public void OscarController_Fail_Duplicate()
         {
             //arrange
             string cookie = "Trash Can";
@@ -98,7 +98,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Put_Success()
+        public void OscarController_Put_Success()
         {
             //arrange
             int id = 5;
@@ -114,7 +114,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Put_Fail_IdNotFound()
+        public void OscarController_Put_Fail_IdNotFound()
         {
             //arrange
             int id = 11;
@@ -130,7 +130,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Delete_Success()
+        public void OscarController_Delete_Success()
         {
             //arrange
             int id = 31;
@@ -145,7 +145,7 @@ namespace HealthyTeam.Api.Tests
         }
 
         [TestMethod]
-        public void BertController_Delete_IdNotFound()
+        public void OscarController_Delete_IdNotFound()
         {
             //arrange
             int id = 3;
